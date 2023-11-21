@@ -41,7 +41,14 @@ footer {
   cursor: pointer;
 }
 
-.nav-link {
+.nav-link,
+.menu-button-header {
+  position: relative;
+}
+
+.nav-link,
+.menu-button-header a,
+.menu-button-enjoy {
   color: var(--text-dark, #403f3d);
   font-feature-settings: "clig" off, "liga" off;
   /* Desktop/Action/link & button */
@@ -53,26 +60,34 @@ footer {
   /* 24px */
 }
 
-.menu-button-header {
-  margin-right: 30px;
-  width: 44px;
-  color: var(--text-dark, #403F3D);
-  font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Action/link & button */
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%;
-  /* 24px */
-}
-
+.nav-link:after,
 .menu-button-header::after {
   content: "";
   position: absolute;
-  top: 38px;
-  right: 40px;
+  left: 50%;
+  right: 50%;
+  bottom: -5px;
+  height: 2px;
+  background: var(--text-dark, #403f3d);
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover::after,
+.menu-button-header:hover:after {
+  left: 0;
+  right: 0;
+}
+
+.menu-button-header {
+  margin-right: -2px;
+  width: 74px;
+}
+
+.menu-button-header::before {
+  content: "";
+  position: absolute;
+  top:0px;
+  right: 2px;
   width: 20px;
   height: 20px;
   background-image: url(../icons/coffee-cup.svg);
@@ -138,6 +153,7 @@ footer {
 }
 
 .menu-button-enjoy {
+  position: relative;
   display: flex;
   width: 200px;
   height: 64px;
@@ -149,5 +165,17 @@ footer {
   border: 1px solid var(--background-body, #E1D4C9);
   background: var(--background-body, #E1D4C9);
   cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-button-enjoy:hover:before {
+  content: "";
+  position: absolute;
+  top:19px;
+  right: 50px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../icons/coffee-cup.svg);
+  background-repeat: no-repeat;
   transition: 0.5s ease-in-out;
 }
