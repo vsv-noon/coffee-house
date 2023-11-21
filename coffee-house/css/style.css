@@ -20,10 +20,12 @@ footer {
 }
 
 .header-wrapper {
+  position: relative;
   display: flex;
+  /* gap: 366px; */
   justify-content: space-between;
   align-items: center;
-  margin: 20px 40px;
+  padding: 20px 40px;
 }
 
 .logo {
@@ -34,6 +36,7 @@ footer {
 
 .nav-menu {
   display: flex;
+  margin-right: 40px;
   gap: 40px;
   cursor: pointer;
 }
@@ -50,7 +53,9 @@ footer {
   /* 24px */
 }
 
-.menu {
+.menu-button-header {
+  margin-right: 30px;
+  width: 44px;
   color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
 
@@ -61,4 +66,88 @@ footer {
   font-weight: 600;
   line-height: 150%;
   /* 24px */
+}
+
+.menu-button-header::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../icons/coffee-cup.svg);
+  background-repeat: no-repeat;
+}
+
+.enjoy-wrapper {
+  margin: 0 40px;
+  border-radius: 40px;
+  background: url(../images/img-hero.jpg), lightgray 50% / cover no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 644px;
+}
+
+.h1-enjoy span {
+  color: var(--text-accent, #B0907A);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Heading/heading-1.accent */
+  font-family: Inter;
+  font-size: 72px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 105%;
+  /* 75.6px */
+}
+
+.h1-enjoy {
+  color: var(--text-light, #E1D4C9);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Heading/heading-1 */
+  font-family: Inter;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%;
+  margin-bottom: 25px;
+}
+
+.enjoy-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  padding-top: 53px;
+  padding-left: 100px;
+  /* gap: 40px; */
+}
+
+.p-enjoy {
+  color: var(--text-light, #E1D4C9);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Body/medium */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 39px;
+}
+
+.menu-button-enjoy {
+  display: flex;
+  width: 200px;
+  height: 64px;
+  padding: 20px 78px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid var(--background-body, #E1D4C9);
+  background: var(--background-body, #E1D4C9);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
