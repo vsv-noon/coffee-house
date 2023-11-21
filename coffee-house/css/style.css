@@ -102,6 +102,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   height: 644px;
+  margin-bottom: 100px;
 }
 
 .h1-enjoy span {
@@ -178,4 +179,31 @@ footer {
   background-image: url(../icons/coffee-cup.svg);
   background-repeat: no-repeat;
   transition: 0.5s ease-in-out;
+}
+
+/* Section Favourites coffee */
+
+.h2-favourites-coffee {
+  color: var(--text-dark, #403F3D);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Heading/heading-2 */
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 75px */
+}
+
+.h2-favourites-coffee span {
+  color: var(--text-accent, #B0907A);
+font-feature-settings: 'clig' off, 'liga' off;
+
+/* Desktop/Heading/heading-2.accent */
+font-family: Inter;
+font-size: 60px;
+font-style: italic;
+font-weight: 600;
+line-height: 125%;
 }
