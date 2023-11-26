@@ -357,6 +357,24 @@ footer {
   background-size: cover;
 }
 
+.about-2 {
+  background-image: url(../images/about-2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.about-3 {
+  background-image: url(../images/about-3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.about-4 {
+  background-image: url(../images/about-4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 .about-1:hover background-image {
   transform: scale(1.1);
 }
@@ -404,4 +422,140 @@ footer {
   font-style: italic;
   font-weight: 600;
   line-height: 125%;
+}
+
+/* Mobile App */
+
+.mobile-app-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.h2-mobile-app {
+  color: var(--text-dark, #403F3D);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Heading/heading-2 */
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  margin-top: 144px;
+  margin-bottom: 40px;
+}
+
+.h2-mobile-app span {
+  color: var(--text-accent, #B0907A);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Heading/heading-2.accent */
+  font-family: Inter;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 125%;
+  /* 75px */
+}
+
+.p-mobile-app {
+  color: var(--text-dark, #403F3D);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Body/medium */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+  margin-bottom: 40px;
+}
+
+.mobile-app-left {
+  max-width: 630px;
+}
+
+.mobile-app-right {
+  width: 630px;
+  height: 630px;
+  background-image: url(../images/mobile-screens.png);
+}
+
+.mobile-app-btn {
+  width: 200px;
+  height: 64px;
+  border-radius: 100px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark, #665F55);
+  margin-right: 18px;
+  background: var(--background-body, #E1D4C9);
+  color: var(--text-dark, #403F3D);
+  font-feature-settings: 'clig' off, 'liga' off;
+  cursor: pointer;
+  text-align-last: left;
+
+  /* Desktop/Body/caption */
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 14px */
+}
+
+.mobile-app-btn span {
+  color: var(--text-dark, #403F3D);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Action/link & button */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  /* 24px */
+}
+
+.mobile-app-btn:hover,
+.mobile-app-btn:hover span {
+  color: var(--text-light, #E1D4C9);
+  background: var(--background-container, #665F55);
+}
+
+.app-store,
+.google-play {
+  position: relative;
+}
+
+.app-store,
+.google-play {
+  padding-left: 60px;
+}
+
+.app-store::before,
+.google-play::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 19px;
+  width: 36px;
+  height: 36px;
+}
+
+.app-store::before {
+  background-image: url(../icons/app-store.svg);
+}
+
+.app-store:hover::before {
+  background-image: url(../icons/app-store-light.svg);
+}
+
+.google-play::before {
+  background-image: url(../icons/google-play.svg);
+}
+
+.google-play:hover::before {
+  background-image: url(../icons/google-play-light.svg);
 }
