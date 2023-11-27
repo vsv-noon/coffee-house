@@ -282,8 +282,8 @@ footer {
 
 .slider-arrow-left:hover {
   border-radius: 100px;
-background: var(--background-container, #665F55);
-transition: all 0.3s ease;
+  background: var(--background-container, #665F55);
+  transition: all 0.3s ease;
 }
 
 .slider-arrow-left:hover::before {
@@ -310,8 +310,8 @@ transition: all 0.3s ease;
 
 .slider-arrow-right:hover {
   border-radius: 100px;
-background: var(--background-container, #665F55);
-transition: all 0.3s ease;
+  background: var(--background-container, #665F55);
+  transition: all 0.3s ease;
 }
 
 .slider-arrow-right:hover::before {
@@ -408,42 +408,27 @@ transition: all 0.3s ease;
 
 .about-1,
 .about-4 {
-  /* width: 660px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 660px;
   height: 590px;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.about-1 {
-  background-image: url(../images/about-1.jpg);
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  transition: all 3s ease;
-}
-
-.about-2 {
-  background-image: url(../images/about-2.jpg);
-  background-position: center;
-  /* background-repeat: no-repeat; */
-}
-
-.about-3 {
-  background-image: url(../images/about-3.jpg);
-  background-position: center;
-  /* background-size: cover; */
-}
-
-.about-4 {
-  background-image: url(../images/about-4.jpg);
-  background-position: center;
+.about-1 img,
+.about-2 img,
+.about-3 img,
+.about-4 img {
+  scale: 1;
+  transition: 1s ease;
 }
 
 .about-1:hover,
 .about-2:hover,
 .about-3:hover,
 .about-4:hover {
-  background-size: cover;
   transition: all 3s ease;
 }
 
@@ -453,17 +438,23 @@ transition: all 0.3s ease;
   height: 430px;
   border-radius: 20px;
   overflow: hidden;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-2 img,
 .about-3 img {
   width: 726px;
+  height: 726px;
 }
 
-.about-3:hover img {
-  transition: 3s ease;
-  transform: scale(0.9);
+.about-1:hover img,
+.about-2:hover img,
+.about-3:hover img,
+.about-4:hover img {
+  transition: 1s ease;
+  scale: 0.9;
 }
 
 .h2-about {
@@ -751,7 +742,7 @@ transition: all 0.3s ease;
   bottom: -5px;
   height: 2px;
   /* border-radius: 8px; */
-background: var(--background-body, #E1D4C9);
+  background: var(--background-body, #E1D4C9);
   transition: all 0.5s ease-in-out;
 }
 

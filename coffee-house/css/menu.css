@@ -227,7 +227,7 @@ transition: all 0.3s ease;
   background-position: center;
 }
 
-#coffee-1-img {
+.menu-card-item #coffee-1-img {
   background: url(../images/coffee-1.jpg), lightgray 50% / cover no-repeat;
   background-position: center;
 }
