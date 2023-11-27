@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee House</title>
+  <link rel="icon" href="./icons/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;600&display=swap"
@@ -27,7 +28,7 @@
           <li><a href="#contact-us" class="nav-link">Contact us</a></li>
         </ul>
       </nav>
-      <div class="menu-button-header"><a href="#menu">Menu</a></div>
+      <div class="menu-button-header"><a href="./menu.html">Menu</a></div>
     </div>
   </header>
   <main>
@@ -35,13 +36,13 @@
     <section id="enjoy">
       <div class="enjoy-wrapper">
         <div class="enjoy-text">
-          <h1 class="h2-enjoy"><span>Enjoy</span> premium coffee at our charming cafe
-          </h1>
+          <h2 class="h2-enjoy"><span>Enjoy</span> premium coffee at our charming cafe
+          </h2>
           <p class="p-enjoy">
             With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular
             destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
           </p>
-          <button class="menu-button-enjoy"><span>Menu</span></button>
+          <button class="menu-button-enjoy" onclick="window.location.href='./menu.html';"><span>Menu</span></button>
         </div>
       </div>
     </section>
@@ -102,17 +103,19 @@
             <div class="about-4">
               <!-- <img src="./images/about-4.jpg" alt="about-4" class="about-img"> -->
             </div>
-        </div>
+          </div>
 
+        </div>
       </div>
     </section>
     <section id="mobile-app">
       <div class="mobile-app-wrapper">
         <div class="mobile-app-left">
           <h2 class="h2-mobile-app"><span>Download</span> our apps to start ordering</h2>
-          <p class="p-mobile-app">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
-          <button class="mobile-app-btn app-store">Available on the<br><span>App Store</span></button>
-          <button class="mobile-app-btn google-play">Available on<br><span>Google Play</span></button>
+          <p class="p-mobile-app">Download the Resource app today and experience the comfort of ordering your favorite
+            coffee from wherever you are</p>
+          <button class="mobile-app-btn app-store" onclick="window.open('https://www.apple.com/app-store/','_blank')">Available on the<br><span>App Store</span></button>
+          <button class="mobile-app-btn google-play" onclick="window.open('https://play.google.com','_blank')">Available on<br><span>Google Play</span></button>
         </div>
         <div class="mobile-app-right">
         </div>
@@ -121,26 +124,30 @@
   </main>
   <footer id="contact-us">
     <div class="footer-wrapper">
-        <div class="footer-left-column">
-          <h2 class="h2-footer">Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
-          <a href="https://twitter.com" class="social" target="_blank"><img src="./icons/twitter-light.svg" alt="twitter"></a>
-          <a href="https://instagram.com" class="social" target="_blank"><img src="./icons/instagram-light.svg" alt="instagram"></a>
-          <a href="https://facebook.com" class="social" target="_blank"><img src="./icons//facebook-light.svg" alt="facebook"></a>
-        </div>
-        <div class="footer-right-column">
-          <h3 class="h3-footer">Contact us</h3>
-          <ul class="footer-ul">
-            <li>
-              <a href="htttp://maps.google.com" class="footer-link" target="_blank"><img src="./icons/pin-alt.svg" alt=""> 8558 Green Rd.,  LA</a>
-            </li>
-            <li>
-              <a href="tel:+16035550123"><img src="./icons/phone.svg" alt=""> +1 (603) 555-0123</a>
-            </li>
-            <li>
-              <img src="./icons/clock.svg" alt=""> Mon-Sat: 9:00 AM – 23:00 PM
-            </li>
-          </ul>
-        </div>
+      <div class="footer-left-column">
+        <h2 class="h2-footer">Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
+        <a href="https://twitter.com" class="social" target="_blank"><img src="./icons/twitter-light.svg"
+            alt="twitter"></a>
+        <a href="https://instagram.com" class="social" target="_blank"><img src="./icons/instagram-light.svg"
+            alt="instagram"></a>
+        <a href="https://facebook.com" class="social" target="_blank"><img src="./icons//facebook-light.svg"
+            alt="facebook"></a>
+      </div>
+      <div class="footer-right-column">
+        <h3 class="h3-footer">Contact us</h3>
+        <ul class="footer-ul">
+          <li>
+            <a href="https://www.google.com/maps/place/Parkers'+Lighthouse/@33.7637611,-118.188721,16.01z/data=!4m6!3m5!1s0x80dd3125a85f8ef3:0x13a546608196176c!8m2!3d33.7598611!4d-118.1917967!16s%2Fg%2F12ht41c8v?entry=ttu" class="footer-link" target="_blank"><img src="./icons/pin-alt.svg" alt="">
+              8558 Green Rd., LA</a>
+          </li>
+          <li>
+            <a href="tel:+16035550123"><img src="./icons/phone.svg" alt=""> +1 (603) 555-0123</a>
+          </li>
+          <li>
+            <img src="./icons/clock.svg" alt=""> Mon-Sat: 9:00 AM – 23:00 PM
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 

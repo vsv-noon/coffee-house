@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: gray;
+}
+
+header,
+main,
+footer {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: #e1d4c9;
+}
+
+.menu-button-header {
+  pointer-events: none;
+}
+
+.menu-button-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--text-dark, #403f3d);
+  transition: all 0.5s ease-in-out;
+}

@@ -135,7 +135,8 @@ footer {
   font-style: normal;
   font-weight: 600;
   line-height: 105%;
-  margin-bottom: 41px;
+  padding-top: 49px;
+  padding-bottom: 41px;
 }
 
 .enjoy-text {
@@ -323,6 +324,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 /* About */
@@ -345,7 +347,7 @@ footer {
 
 .about-1,
 .about-4 {
-  width: 660px;
+  /* width: 660px; */
   height: 590px;
   border-radius: 20px;
   overflow: hidden;
@@ -354,29 +356,34 @@ footer {
 .about-1 {
   background-image: url(../images/about-1.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
+  transition: all 3s ease;
 }
 
 .about-2 {
   background-image: url(../images/about-2.jpg);
   background-position: center;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 
 .about-3 {
   background-image: url(../images/about-3.jpg);
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .about-4 {
   background-image: url(../images/about-4.jpg);
   background-position: center;
-  background-size: cover;
 }
 
-.about-1:hover background-image {
-  transform: scale(1.1);
+.about-1:hover,
+.about-2:hover,
+.about-3:hover,
+.about-4:hover {
+  background-size: cover;
+  transition: all 3s ease;
 }
 
 .about-2,
@@ -430,7 +437,6 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
-  padiing-bottom: 100px;
 }
 
 .h2-mobile-app {
