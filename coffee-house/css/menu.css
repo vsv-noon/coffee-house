@@ -72,7 +72,7 @@ body {
 
 .menu-btn {
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .coffee-btn svg {
@@ -193,7 +193,7 @@ body {
 .tea-btn:hover,
 .dessert-btn:hover {
 background: var(--background-container, #665F55);
-transition: all 0.3s ease;
+transition: all 0.5s ease;
 }
 
 .products-menu-box {
@@ -214,69 +214,27 @@ transition: all 0.3s ease;
   /* align-items: start; */
   width: 310px;
   height: 506px;
-  border: 1px solid gray;
+  border: 1px solid #C1B6AD;
   border-radius: 40px;
 }
 
 .item-img {
+  display: flex;
   width: 310px;
   height: 310px;
   border-radius: 40px;
   margin-bottom: 20px;
-  background-size: auto;
-  background-position: center;
+  overflow: hidden;
 }
 
-.menu-card-item #coffee-1-img {
-  background: url(../images/coffee-1.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
+.item-img img {
+  scale: 1.1;
+  transition: all 0.5s ease;
 }
 
-#coffee-2-img {
-  background: url(../images/coffee-2.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
-}
-
-#coffee-3-img {
-  background: url(../images/coffee-3.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
-}
-
-#coffee-4-img {
-  background: url(../images/coffee-4.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
-}
-
-#coffee-5-img {
-  background: url(../images/coffee-5.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
-}
-
-#coffee-6-img {
-  background: url(../images/coffee-6.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
-}
-
-#coffee-7-img {
-  background: url(../images/coffee-7.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
-}
-
-#coffee-8-img {
-  background: url(../images/coffee-8.jpg), lightgray 50% / cover no-repeat;
-  background-position: center;
-}
-
-#coffee-1-img:hover,
-#coffee-2-img:hover,
-#coffee-3-img:hover,
-#coffee-4-img:hover,
-#coffee-5-img:hover,
-#coffee-6-img:hover,
-#coffee-7-img:hover,
-#coffee-8-img:hover {
-  background-size: cover;
-  transition: all 3s ease;
+.item-img img:hover {
+  scale: 1;
+  transition: all 0.5s ease;
 }
 
 .h3-item {
@@ -330,7 +288,7 @@ transition: all 0.3s ease;
 
 .footer-left-column {
   max-width: 650px;
-  padding: 100px 50px 95px 100px;
+  padding: 100px 50px 100px 100px;
 }
 
 .footer-right-column {
