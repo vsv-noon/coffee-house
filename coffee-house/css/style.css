@@ -591,6 +591,7 @@ transition: all 0.3s ease;
 .mobile-app-btn:hover span {
   color: var(--text-light, #E1D4C9);
   background: var(--background-container, #665F55);
+  transition: all 0.3s ease;
 }
 
 .app-store,
@@ -601,6 +602,7 @@ transition: all 0.3s ease;
 .app-store,
 .google-play {
   padding-left: 60px;
+  transition: all 0.3s ease;
 }
 
 .app-store::before,
@@ -681,7 +683,28 @@ transition: all 0.3s ease;
 }
 
 .social {
+  display: flex;
+  /* gap: 12px; */
+}
+
+.social li {
   margin-right: 7px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--background-body, #E1D4C9);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social li:hover {
+  background-color: var(--background-body, #E1D4C9);
+  transition: all 0.3s ease;
+}
+
+.social li:hover path {
+  /* fill: var(--background-body, #E1D4C9); */
+  stroke: var(--background-container, #665F55);
+  transition: all 0.3s ease;
 }
 
 .h3-footer {

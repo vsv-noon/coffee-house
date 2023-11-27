@@ -72,6 +72,7 @@ body {
 
 .menu-btn {
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .coffee-btn svg {
@@ -88,6 +89,7 @@ body {
 
 .coffee-btn {
   display: flex;
+  /* position: relative; */
   /* padding: 8px 16px 8px 8px; */
   justify-content: center;
   align-items: center;
@@ -109,6 +111,16 @@ body {
   border-radius: 100px;
   background: var(--background-container, #665F55);
   pointer-events: none;
+}
+
+.coffee-btn::before {
+  /* position: absolute; */
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-image: url(../icons/coffee-btn.png);
 }
 
 .tea-btn {
@@ -135,6 +147,15 @@ body {
   border: 1px solid var(--border-light, #C1B6AD);
 }
 
+.tea-btn::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-image: url(../icons/tea-btn.png);
+}
+
 .dessert-btn {
   display: flex;
   /* padding: 8px 16px 8px 8px; */
@@ -157,6 +178,22 @@ body {
   height: 46px;
   border-radius: 100px;
   border: 1px solid var(--border-light, #C1B6AD);
+}
+
+.dessert-btn::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-image: url(../icons/dessert-btn.png);
+}
+
+.coffee-btn:hover,
+.tea-btn:hover,
+.dessert-btn:hover {
+background: var(--background-container, #665F55);
+transition: all 0.3s ease;
 }
 
 .products-menu-box {
@@ -285,6 +322,10 @@ body {
   line-height: 125%;
   /* 30px */
   padding: 0 20px 20px;
+}
+
+.social {
+  gap: 5px;
 }
 
 .footer-left-column {
