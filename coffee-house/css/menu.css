@@ -89,7 +89,7 @@ body {
 
 .coffee-btn {
   display: flex;
-  /* position: relative; */
+  position: relative;
   /* padding: 8px 16px 8px 8px; */
   justify-content: center;
   align-items: center;
@@ -113,13 +113,25 @@ body {
   pointer-events: none;
 }
 
+.coffee-btn span {
+  padding-left: 26px;
+}
+
+.tea-btn span {
+  padding-left: 26px;
+}
+
+.dessert-btn span {
+  padding-left: 26px;
+}
+
 .coffee-btn::before {
-  /* position: absolute; */
+  position: absolute;
   content: '';
   width: 30px;
   height: 30px;
-  top: 0;
-  left: 0;
+  top: 7px;
+  left: 7px;
   background-image: url(../icons/coffee-btn.png);
 }
 
@@ -148,11 +160,12 @@ body {
 }
 
 .tea-btn::before {
+  position: absolute;
   content: '';
   width: 30px;
   height: 30px;
-  top: 0;
-  left: 0;
+  top: 7px;
+  left: 7px;
   background-image: url(../icons/tea-btn.png);
 }
 
@@ -181,11 +194,12 @@ body {
 }
 
 .dessert-btn::before {
+  position: absolute;
   content: '';
   width: 30px;
   height: 30px;
-  top: 0;
-  left: 0;
+  top: 7px;
+  left: 7px;
   background-image: url(../icons/dessert-btn.png);
 }
 
