@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: #e1d4c9;
 }
 
 header,
@@ -676,7 +676,7 @@ footer {
   margin-right: 7px;
   width: 60px;
   height: 60px;
-  border: 1px solid var(--background-body, #E1D4C9);
+  /* border: 1px solid var(--background-body, #E1D4C9); */
   border-radius: 50%;
   transition: all 0.5s ease;
 }
