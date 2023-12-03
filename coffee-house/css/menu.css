@@ -40,14 +40,11 @@ body {
   color: var(--text-dark, #403F3D);
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-2 */
   font-family: Inter;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
-  /* 75px */
   max-width: 800px;
   margin-bottom: 40px;
 }
@@ -55,8 +52,6 @@ body {
 .h2-menu span {
   color: var(--text-accent, #B0907A);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-2.accent */
   font-family: Inter;
   font-size: 60px;
   font-style: italic;
@@ -79,7 +74,6 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  /* border: 1px solid black; */
   background: #E1D4C9;
 }
 
@@ -90,22 +84,16 @@ body {
 .coffee-btn {
   display: flex;
   position: relative;
-  /* padding: 8px 16px 8px 8px; */
   justify-content: center;
   align-items: center;
   gap: 8px;
-
   color: var(--text-light, #E1D4C9);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Action/link & button */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  /* 24px */
-
   width: 115px;
   height: 46px;
   border-radius: 100px;
@@ -138,22 +126,16 @@ body {
 .tea-btn {
   position: relative;
   display: flex;
-  /* padding: 8px 16px 8px 8px; */
   justify-content: center;
   align-items: center;
   gap: 8px;
-
   color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Action/link & button */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  /* 24px */
-
   width: 90px;
   height: 46px;
   border-radius: 100px;
@@ -173,22 +155,16 @@ body {
 .dessert-btn {
   position: relative;
   display: flex;
-  /* padding: 8px 16px 8px 8px; */
   justify-content: center;
   align-items: center;
   gap: 8px;
-
   color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Action/link & button */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  /* 24px */
-
   width: 124px;
   height: 46px;
   border-radius: 100px;
@@ -205,11 +181,14 @@ body {
   background-image: url(../icons/dessert-btn.png);
 }
 
-.coffee-btn:hover,
-.tea-btn:hover,
-.dessert-btn:hover {
-  background: var(--background-container, #665F55);
-  transition: all 0.5s ease;
+@media (hover:hover) and (pointer:fine) {
+
+  .coffee-btn:hover,
+  .tea-btn:hover,
+  .dessert-btn:hover {
+    background: var(--background-container, #665F55);
+    transition: all 0.5s ease;
+  }
 }
 
 .products-menu-box {
@@ -232,7 +211,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* align-items: start; */
   width: 310px;
   height: 506px;
   border: 1px solid #C1B6AD;
@@ -254,36 +232,32 @@ body {
   transition: all 0.5s ease;
 }
 
-.menu-card-item:hover>.item-img>img {
-  scale: 1;
-  transition: all 0.5s ease;
+@media (hover:hover) and (pointer:fine) {
+  .menu-card-item:hover>.item-img>img {
+    scale: 1;
+    transition: all 0.5s ease;
+  }
 }
 
 .h3-item {
   color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-3 */
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
-  /* 30px */
   padding: 0 20px 12px;
 }
 
 .p-item {
   color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Body/medium */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  /* 24px */
   padding: 0 20px 12px;
 }
 
@@ -293,14 +267,11 @@ body {
   left: 0;
   color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-3 */
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
-  /* 30px */
   padding: 0 20px 20px;
 }
 
@@ -308,36 +279,7 @@ body {
   display: none;
 }
 
-@media (max-width: 770px) {
-
-  #coffee-5-img,
-  #coffee-6-img,
-  #coffee-7-img,
-  #coffee-8-img {
-    display: none;
-    height: 0;
-  }
-
-  .products-menu-box {
-
-  }
-
-  .products-menu-box ul {
-    /* flex-direction: column; */
-    /* align-items: center; */
-    margin-bottom: 40px;
-  }
-
-  .refresh-button {
-    display: block;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 50%;
-    border: none;
-    background-color: #E1D4C9;
-  }
-
+@media (hover:hover) and (pointer:fine) {
   .refresh-button:hover {
     background-color: var(--background-body, #665F55);
     transition: all 0.5s ease;
@@ -350,6 +292,31 @@ body {
   }
 }
 
+@media (max-width: 770px) {
+
+  #coffee-5-img,
+  #coffee-6-img,
+  #coffee-7-img,
+  #coffee-8-img {
+    display: none;
+    height: 0;
+  }
+
+  .products-menu-box ul {
+    margin-bottom: 40px;
+  }
+
+  .refresh-button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: #E1D4C9;
+  }
+}
+
 @media (max-width: 681px) {
   .products-menu-box ul {
     flex-direction: column;
@@ -359,27 +326,23 @@ body {
 
   .h2-menu {
     color: var(--text-dark, #403F3D);
-text-align: center;
-font-feature-settings: 'clig' off, 'liga' off;
-
-/* Mobile/Heading/heading-2 */
-font-family: Inter;
-font-size: 32px;
-font-style: normal;
-font-weight: 600;
-line-height: 125%; /* 40px */
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
   }
 
   .h2-menu span {
     color: var(--text-accent, #B0907A);
-font-feature-settings: 'clig' off, 'liga' off;
-
-/* Mobile/Heading/heading-2.accent */
-font-family: Inter;
-font-size: 32px;
-font-style: italic;
-font-weight: 600;
-line-height: 125%;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 125%;
   }
 
   .menu-buttons {
