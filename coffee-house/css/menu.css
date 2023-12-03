@@ -208,17 +208,22 @@ body {
 .coffee-btn:hover,
 .tea-btn:hover,
 .dessert-btn:hover {
-background: var(--background-container, #665F55);
-transition: all 0.5s ease;
+  background: var(--background-container, #665F55);
+  transition: all 0.5s ease;
 }
 
 .products-menu-box {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
 }
 
 .products-menu-box ul {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -249,7 +254,7 @@ transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-.menu-card-item:hover >.item-img > img {
+.menu-card-item:hover>.item-img>img {
   scale: 1;
   transition: all 0.5s ease;
 }
@@ -297,4 +302,39 @@ transition: all 0.5s ease;
   line-height: 125%;
   /* 30px */
   padding: 0 20px 20px;
+}
+
+.refresh-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  #coffee-5-img,
+  #coffee-6-img,
+  #coffee-7-img,
+  #coffee-8-img {
+    display: none;
+  }
+
+  .refresh-button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: #E1D4C9;
+  }
+
+  .refresh-button:hover {
+    background-color: var(--background-body, #665F55);
+    transition: all 0.5s ease;
+  }
+
+  .refresh-button:hover path {
+    /* fill: var(--background-body, #E1D4C9); */
+    stroke: var(--background-container, #E1D4C9);
+    transition: all 0.5s ease;
+  }
 }

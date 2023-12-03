@@ -37,6 +37,10 @@ footer {
   background-image: url(../icons/logo.svg);
 }
 
+.hamburger-button {
+  display: none;
+}
+
 .nav-menu {
   display: flex;
   gap: 40px;
@@ -103,6 +107,48 @@ footer {
 
   .menu-button-header {
     display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    border: 1px solid var(--border-dark, #665F55);
+    cursor: pointer;
+  }
+
+  .hamburger-button::before {
+    position: absolute;
+    content: '';
+    top: 16px;
+    right: 13px;
+    width: 16px;
+    height: 1px;
+    background-color: #403F3D;
+    transition: all 0.3s ease 0s;
+  }
+
+  .hamburger-button::after {
+    position: absolute;
+    content: '';
+    top: 25px;
+    right: 13px;
+    width: 16px;
+    height: 1px;
+    background-color: #403F3D;
+    transition: all 0.3s ease 0s;
+  }
+
+  .hamburger-button.active::before {
+    top: 48%;
+    transform: translate(0px, 50%) rotate(45deg);
+  }
+
+  .hamburger-button.active::after {
+    top: 50%;
+    transform: translate(0px, -50%) rotate(-45deg);
   }
 }
 
