@@ -308,13 +308,24 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
 
   #coffee-5-img,
   #coffee-6-img,
   #coffee-7-img,
   #coffee-8-img {
     display: none;
+    height: 0;
+  }
+
+  .products-menu-box {
+
+  }
+
+  .products-menu-box ul {
+    /* flex-direction: column; */
+    /* align-items: center; */
+    margin-bottom: 40px;
   }
 
   .refresh-button {
@@ -336,5 +347,42 @@ body {
     /* fill: var(--background-body, #E1D4C9); */
     stroke: var(--background-container, #E1D4C9);
     transition: all 0.5s ease;
+  }
+}
+
+@media (max-width: 681px) {
+  .products-menu-box ul {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .h2-menu {
+    color: var(--text-dark, #403F3D);
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off;
+
+/* Mobile/Heading/heading-2 */
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 125%; /* 40px */
+  }
+
+  .h2-menu span {
+    color: var(--text-accent, #B0907A);
+font-feature-settings: 'clig' off, 'liga' off;
+
+/* Mobile/Heading/heading-2.accent */
+font-family: Inter;
+font-size: 32px;
+font-style: italic;
+font-weight: 600;
+line-height: 125%;
+  }
+
+  .menu-buttons {
+    gap: 10px;
   }
 }
