@@ -57,13 +57,11 @@ footer {
 .menu-button-enjoy {
   color: var(--text-dark, #403f3d);
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Action/link & button */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  /* 24px */
 }
 
 .nav-link:after,
@@ -182,21 +180,16 @@ footer {
 .h2-enjoy span {
   color: var(--text-accent, #B0907A);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-1.accent */
   font-family: Inter;
   font-size: 72px;
   font-style: italic;
   font-weight: 600;
   line-height: 105%;
-  /* 75.6px */
 }
 
 .h2-enjoy {
   color: var(--text-light, #E1D4C9);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-1 */
   font-family: Inter;
   font-size: 72px;
   font-style: normal;
@@ -213,14 +206,11 @@ footer {
   max-width: 620px;
   padding-top: 53px;
   padding-left: 100px;
-  /* gap: 40px; */
 }
 
 .p-enjoy {
   color: var(--text-light, #E1D4C9);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Body/medium */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -269,17 +259,19 @@ footer {
   transition: 0.5s ease-in-out;
 }
 
-.menu-button-enjoy span:hover {
-  /* padding-right: 100px; */
+/* .menu-button-enjoy span:hover {
   translate: -20px;
   transition: 0.5s ease-in-out;
+} */
+
+@media (hover:hover) and (pointer:fine) {
+  .menu-button-enjoy span:hover {
+    translate: -20px;
+    transition: 0.5s ease-in-out;
+  }
 }
 
-@media (max-width: 770px) {
-  .enjoy-text {
-    padding-left: 60px;
-  }
-
+@media (hover:none) and (pointer:coarse) {
   .menu-button-enjoy span {
     padding-left: 50px;
   }
@@ -290,7 +282,6 @@ footer {
   }
 
   .menu-button-enjoy span:hover {
-    /* padding-right: 100px; */
     translate: 0;
     transition: 0.5s ease-in-out;
   }
@@ -298,6 +289,30 @@ footer {
   .menu-button-enjoy:hover::before {
     right: 63px;
   }
+}
+
+@media (max-width: 770px) {
+  .enjoy-text {
+    padding-left: 60px;
+  }
+
+  /* .menu-button-enjoy span {
+    padding-left: 50px;
+  }
+
+  .menu-button-enjoy::before {
+    height: 20px;
+    right: 63px;
+  }
+
+  .menu-button-enjoy span:hover {
+    translate: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .menu-button-enjoy:hover::before {
+    right: 63px;
+  } */
 }
 
 @media (max-width: 681px) {

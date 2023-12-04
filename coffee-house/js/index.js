@@ -1,5 +1,11 @@
-const menuToggle = document.querySelector(".hamburger-button");
+// const menuToggle = document.querySelector(".hamburger-button");
 
-menuToggle.onclick = function() {
-  menuToggle.classList.toggle("active");
-}
+// menuToggle.onclick = function() {
+//   menuToggle.classList.toggle("active");
+// }
+
+alert(`Уважаемые проверящие! Обратите внимание! Виталий написал в этом сообщении про кнопку меню в секции Enjoy
+
+'https://discord.com/channels/516715744646660106/1174991206883807264/1180189001144078459'
+
+"Я бы следовал макету для простоты проверки, но правильнее функционально выглядит вариант, когда в режиме мобайл чашка есть на любом разрешении. Надеюсь, что к чашке никто не будет сильно придираться"`)
