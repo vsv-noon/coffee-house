@@ -78,10 +78,13 @@ footer {
   transition: all 0.5s ease-in-out;
 }
 
-.nav-link:hover::after,
-.menu-button-header:hover:after {
-  left: 0;
-  right: 0;
+@media (hover:hover) and (pointer:fine) {
+
+  .nav-link:hover::after,
+  .menu-button-header:hover:after {
+    left: 0;
+    right: 0;
+  }
 }
 
 .menu-button-header {
@@ -419,23 +422,6 @@ footer {
   transition: all 0.5s ease;
 }
 
-.slider-arrow-left:hover {
-  border-radius: 100px;
-  background: var(--background-container, #665F55);
-  transition: all 0.5s ease;
-}
-
-.slider-arrow-left:hover::before {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 18px;
-  left: 15px;
-  background-image: url(../icons/arrow-left-light.svg);
-  transition: all 0.5s ease;
-}
-
 .slider-arrow-right::before {
   content: '';
   position: absolute;
@@ -447,21 +433,40 @@ footer {
   transition: all 0.5s ease;
 }
 
-.slider-arrow-right:hover {
-  border-radius: 100px;
-  background: var(--background-container, #665F55);
-  transition: all 0.5s ease;
-}
+@media (hover:hover) and (pointer:fine) {
+  .slider-arrow-left:hover::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 18px;
+    left: 15px;
+    background-image: url(../icons/arrow-left-light.svg);
+    transition: all 0.5s ease;
+  }
 
-.slider-arrow-right:hover::before {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 18px;
-  left: 15px;
-  background-image: url(../icons/arrow-right-light.svg);
-  transition: all 0.5s ease;
+  .slider-arrow-right:hover::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 18px;
+    left: 15px;
+    background-image: url(../icons/arrow-right-light.svg);
+    transition: all 0.5s ease;
+  }
+
+  .slider-arrow-left:hover {
+    border-radius: 100px;
+    background: var(--background-container, #665F55);
+    transition: all 0.5s ease;
+  }
+
+  .slider-arrow-right:hover {
+    border-radius: 100px;
+    background: var(--background-container, #665F55);
+    transition: all 0.5s ease;
+  }
 }
 
 .slide {
@@ -538,6 +543,7 @@ footer {
 }
 
 @media (max-width: 690px) {
+
   .slider-arrow-left,
   .slider-arrow-right {
     display: none;
@@ -640,18 +646,25 @@ footer {
   align-items: center;
 }
 
-.about-2 img,
-.about-3 img {
-  /* width: 726px;
-  height: 726px; */
+@media (hover:hover) and (pointer:fine) {
+
+  .about-1:hover img,
+  .about-2:hover img,
+  .about-3:hover img,
+  .about-4:hover img {
+    transition: 1s ease;
+    scale: 1;
+  }
 }
 
-.about-1:hover img,
-.about-2:hover img,
-.about-3:hover img,
-.about-4:hover img {
-  transition: 1s ease;
-  scale: 1;
+@media (hover:none) and (pointer:coarse) {
+
+  .about-1 img,
+  .about-2 img,
+  .about-3 img,
+  .about-4 img {
+    pointer-events: none;
+  }
 }
 
 .h2-about {
@@ -861,13 +874,6 @@ footer {
   /* 24px */
 }
 
-.mobile-app-btn:hover,
-.mobile-app-btn:hover span {
-  color: var(--text-light, #E1D4C9);
-  background: var(--background-container, #665F55);
-  transition: all 0.5s ease;
-}
-
 .app-store,
 .google-play {
   position: relative;
@@ -893,18 +899,28 @@ footer {
   background-image: url(../icons/app-store.svg);
 }
 
-.app-store:hover::before {
-  background-image: url(../icons/app-store-light.svg);
-  transition: all 0.5s ease;
-}
-
 .google-play::before {
   background-image: url(../icons/google-play.svg);
 }
 
-.google-play:hover::before {
-  background-image: url(../icons/google-play-light.svg);
-  transition: all 0.5s ease;
+@media (hover:hover) and (pointer:fine) {
+
+  .mobile-app-btn:hover,
+  .mobile-app-btn:hover span {
+    color: var(--text-light, #E1D4C9);
+    background: var(--background-container, #665F55);
+    transition: all 0.5s ease;
+  }
+
+  .app-store:hover::before {
+    background-image: url(../icons/app-store-light.svg);
+    transition: all 0.5s ease;
+  }
+
+  .google-play:hover::before {
+    background-image: url(../icons/google-play-light.svg);
+    transition: all 0.5s ease;
+  }
 }
 
 @media (max-width: 1130px) {
@@ -1036,15 +1052,17 @@ footer {
   transition: all 0.5s ease;
 }
 
-.social li:hover {
-  background-color: var(--background-body, #E1D4C9);
-  transition: all 0.5s ease;
-}
+@media (hover:hover) and (pointer:fine) {
+  .social li:hover {
+    background-color: var(--background-body, #E1D4C9);
+    transition: all 0.5s ease;
+  }
 
-.social li:hover path {
-  /* fill: var(--background-body, #E1D4C9); */
-  stroke: var(--background-container, #665F55);
-  transition: all 0.5s ease;
+  .social li:hover path {
+    /* fill: var(--background-body, #E1D4C9); */
+    stroke: var(--background-container, #665F55);
+    transition: all 0.5s ease;
+  }
 }
 
 .h3-footer {
@@ -1104,9 +1122,11 @@ footer {
   transition: all 0.5s ease-in-out;
 }
 
-.footer-link:hover:after {
-  left: 0;
-  right: 0;
+@media (hover:hover) and (pointer:fine) {
+  .footer-link:hover:after {
+    left: 0;
+    right: 0;
+  }
 }
 
 @media (max-width: 1130px) {
