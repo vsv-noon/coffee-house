@@ -920,8 +920,6 @@ footer {
   .h2-mobile-app {
     color: var(--text-dark, #403F3D);
     font-feature-settings: 'clig' off, 'liga' off;
-
-    /* Mobile/Heading/heading-2 */
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
@@ -933,14 +931,11 @@ footer {
   .h2-mobile-app span {
     color: var(--text-accent, #B0907A);
     font-feature-settings: 'clig' off, 'liga' off;
-
-    /* Mobile/Heading/heading-2.accent */
     font-family: Inter;
     font-size: 32px;
     font-style: italic;
     font-weight: 600;
     line-height: 125%;
-    /* 40px */
   }
 
   .app-store {
@@ -981,22 +976,17 @@ footer {
 .h2-footer {
   color: var(--text-light, #E1D4C9);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-2 */
   font-family: Inter;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
-  /* 75px */
   padding-bottom: 40px;
 }
 
 .h2-footer span {
   color: var(--text-accent, #B0907A);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-2.accent */
   font-family: Inter;
   font-size: 60px;
   font-style: italic;
@@ -1025,7 +1015,6 @@ footer {
   }
 
   .social li:hover path {
-    /* fill: var(--background-body, #E1D4C9); */
     stroke: var(--background-container, #665F55);
     transition: all 0.5s ease;
   }
@@ -1034,14 +1023,11 @@ footer {
 .h3-footer {
   color: var(--text-light, #E1D4C9);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-3 */
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
-  /* 30px */
   margin-bottom: 40px;
 }
 
@@ -1049,14 +1035,12 @@ footer {
 .footer-ul a {
   color: var(--text-light, #E1D4C9);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Action/link & button */
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  /* 24px */
+
 }
 
 .footer-ul li {
@@ -1083,7 +1067,6 @@ footer {
   right: 50%;
   bottom: -5px;
   height: 2px;
-  /* border-radius: 8px; */
   background: var(--background-body, #E1D4C9);
   transition: all 0.5s ease-in-out;
 }
@@ -1125,21 +1108,16 @@ footer {
   .h2-footer {
     color: var(--text-light, #E1D4C9);
     font-feature-settings: 'clig' off, 'liga' off;
-
-    /* Mobile/Heading/heading-2 */
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 125%;
-    /* 40px */
   }
 
   .h2-footer span {
     color: var(--text-accent, #B0907A);
     font-feature-settings: 'clig' off, 'liga' off;
-
-    /* Mobile/Heading/heading-2.accent */
     font-family: Inter;
     font-size: 32px;
     font-style: italic;

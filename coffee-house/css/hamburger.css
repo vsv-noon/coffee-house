@@ -5,29 +5,27 @@ body.lock {
 @media (max-width: 768px) {
   .header-panel {
     position: absolute;
-    /* padding: auto; */
     padding-top: 80px;
     top: 80px;
-    right: -100%;
-    width: 100vw;
+    right: 0;
+    width: 0;
     height: 100vh;
-    /* height: 724px; */
-    background: #E1D4C9;
+     background: #E1D4C9;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    /* align-items: center; */
     overflow: hidden;
     transition: all 0.5s ease;
     z-index: 1;
+    opacity: 0;
   }
 
   .header-panel.active {
     right: 0;
     width: 100vw;
     height: 100vh;
-    /* height: 724px; */
     transition: all 0.5s ease;
+     opacity: 1;
   }
 
   .nav-menu {
