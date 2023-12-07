@@ -37,6 +37,19 @@ footer {
   background-image: url(../icons/logo.svg);
 }
 
+.header-panel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .hamburger-button {
   display: none;
 }
@@ -53,7 +66,7 @@ footer {
 }
 
 .nav-link,
-.menu-button-header a,
+.menu-button-header,
 .menu-button-enjoy {
   color: var(--text-dark, #403f3d);
   font-feature-settings: "clig" off, "liga" off;
@@ -86,71 +99,9 @@ footer {
 }
 
 .menu-button-header {
-  margin-right: -2px;
   width: 74px;
-}
-
-.menu-button-header::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 2px;
-  width: 20px;
-  height: 20px;
-  background-image: url(../icons/coffee-cup.svg);
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 770px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .menu-button-header {
-    display: none;
-  }
-
-  .hamburger-button {
-    display: block;
-    position: relative;
-    width: 44px;
-    height: 44px;
-    border-radius: 100px;
-    border: 1px solid var(--border-dark, #665F55);
-    cursor: pointer;
-  }
-
-  .hamburger-button::before {
-    position: absolute;
-    content: '';
-    top: 16px;
-    right: 13px;
-    width: 16px;
-    height: 1px;
-    background-color: #403F3D;
-    transition: all 0.3s ease 0s;
-  }
-
-  .hamburger-button::after {
-    position: absolute;
-    content: '';
-    top: 25px;
-    right: 13px;
-    width: 16px;
-    height: 1px;
-    background-color: #403F3D;
-    transition: all 0.3s ease 0s;
-  }
-
-  .hamburger-button.active::before {
-    top: 48%;
-    transform: translate(0px, 50%) rotate(45deg);
-  }
-
-  .hamburger-button.active::after {
-    top: 50%;
-    transform: translate(0px, -50%) rotate(-45deg);
-  }
+  display: flex;
+  gap: 8px;
 }
 
 @media (max-width: 381px) {
