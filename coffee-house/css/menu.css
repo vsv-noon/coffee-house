@@ -7,7 +7,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -15,7 +15,8 @@ body {
 }
 
 .menu-button-header {
-  pointer-events: none;
+  cursor: default;
+  /* pointer-events: none; */
 }
 
 .menu-button-header::after {
@@ -78,7 +79,8 @@ body {
 }
 
 .menu-btn input {
-  display: none;
+  /* display: none; */
+  cursor: pointer;
 }
 
 .coffee-btn {
@@ -87,7 +89,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  color: var(--text-light, #E1D4C9);
+  color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Inter;
   font-size: 16px;
@@ -97,8 +99,7 @@ body {
   width: 115px;
   height: 46px;
   border-radius: 100px;
-  background: var(--background-container, #665F55);
-  pointer-events: none;
+  border: 1px solid var(--border-light, #C1B6AD);
 }
 
 .coffee-btn span {
@@ -121,6 +122,7 @@ body {
   top: 7px;
   left: 7px;
   background-image: url(../icons/coffee-btn.png);
+  z-index: 2;
 }
 
 .tea-btn {
@@ -150,6 +152,29 @@ body {
   top: 7px;
   left: 7px;
   background-image: url(../icons/tea-btn.png);
+  z-index: 2;
+}
+
+.menu-btn input[type="radio"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  z-index: 0;
+}
+
+.menu-btn input[type="radio"]:checked~span,
+.menu-btn input[type="radio"]:checked::after {
+  color: var(--text-light, #E1D4C9);
+  background: var(--background-container, #665F55);
+}
+
+.menu-btn span {
+  z-index: 1;
+  padding-left: 5px;
 }
 
 .dessert-btn {
@@ -179,13 +204,49 @@ body {
   top: 7px;
   left: 7px;
   background-image: url(../icons/dessert-btn.png);
+  z-index: 2;
 }
 
+.product-menu-section.hidden {
+  visibility: hidden;
+  position: absolute;
+  /* top: -100%; */
+  /* opacity: 0; */
+}
+
+.products-animation {
+  animation: showBlock 1.5s linear forwards;
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.products-hide-animation {
+  animation: hideBlock 1s linear forwards;
+}
+
+@keyframes hideBlock {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+   }
+}
 @media (hover:hover) and (pointer:fine) {
 
   .coffee-btn:hover,
   .tea-btn:hover,
   .dessert-btn:hover {
+    color: var(--text-light, #E1D4C9);
     background: var(--background-container, #665F55);
     transition: all 0.5s ease;
   }
@@ -292,7 +353,7 @@ body {
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
 
   #coffee-5-img,
   #coffee-6-img,
