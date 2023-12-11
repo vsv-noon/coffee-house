@@ -28,7 +28,7 @@
             <li><a href="#contact-us" class="nav-link">Contact us</a></li>
           </ul>
         </nav>
-        <a class="menu-button-header" href="">
+        <a class="menu-button-header nav-link" href="#">
           Menu
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -46,7 +46,7 @@
       <h2 class="h2-menu">Behind each of our cups hides an <span>amazing surprise</span></h2>
       <div class="menu-buttons">
         <label for="coffee" class="menu-btn coffee-btn">
-          <input type="radio" id="coffee" name="menu" value="coffee" checked>
+          <input type="radio" id="coffee" name="menu" value="coffee" data-path="coffee" checked>
 
           <!-- <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M0.5 16.12H16.5V0.12H0.5V16.12Z" fill="url(#pattern0)"/>
@@ -64,7 +64,7 @@
           <span>Coffee</span>
         </label>
         <label for="tea" class="menu-btn tea-btn">
-          <input type="radio" name="menu" id="tea" value="tea">
+          <input type="radio" name="menu" id="tea" value="tea" data-path="tea">
 
           <!-- <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M0.5 16.12H16.5V0.12H0.5V16.12Z" fill="url(#pattern1)"/>
@@ -81,7 +81,7 @@
           <span>Tea</span>
         </label>
         <label for="dessert" class="menu-btn dessert-btn">
-          <input type="radio" name="menu" id="dessert" value="dessert">
+          <input type="radio" name="menu" id="dessert" value="dessert" data-path="dessert">
 
           <!-- <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M0.5 16.12H16.5V0.12H0.5V16.12Z" fill="url(#pattern2)"/>
@@ -101,78 +101,145 @@
       </div>
 
       <div class="products-menu-box">
-        <ul id="coffee-id">
+        <ul id="coffee-id" class="product-menu-section" data-target="coffee">
           <li id="coffee-1-img" class="menu-card-item">
-            <!-- <div id="coffee-1-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-1.jpg" alt="coffee-1"></div>
               <h3 class="h3-item">Irish coffee</h3>
               <p class="p-item">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
               <p class="p-item-price">$7.00</p>
-            <!-- </div> -->
           </li>
 
           <li id="coffee-2-img" class="menu-card-item">
-            <!-- <div id="coffee-2-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-2.jpg" alt="coffee-2"></div>
               <h3 class="h3-item">Kahlua coffee</h3>
               <p class="p-item">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
               <p class="p-item-price">$7.00</p>
-            <!-- </div> -->
           </li>
 
           <li id="coffee-3-img" class="menu-card-item">
-            <!-- <div id="coffee-3-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-3.jpg" alt="coffee-3"></div>
               <h3 class="h3-item">Honey raf</h3>
               <p class="p-item">Espresso with frothed milk, cream and aromatic honey</p>
               <p class="p-item-price">$5.50</p>
-            <!-- </div> -->
           </li>
 
           <li id="coffee-4-img" class="menu-card-item">
-            <!-- <div id="coffee-4-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-4.jpg" alt="coffee-4"></div>
               <h3 class="h3-item">Ice cappuccino</h3>
               <p class="p-item">Cappuccino with soft thick foam in summer version with ice</p>
               <p class="p-item-price">$5.00</p>
-            <!-- </div> -->
           </li>
 
           <li id="coffee-5-img" class="menu-card-item">
-            <!-- <div id="coffee-5-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-5.jpg" alt="coffee-5"></div>
               <h3 class="h3-item">Espresso</h3>
               <p class="p-item">Classic black coffee</p>
               <p class="p-item-price">$4.50</p>
-            <!-- </div> -->
           </li>
 
           <li id="coffee-6-img" class="menu-card-item">
-            <!-- <div id="coffee-6-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-6.jpg" alt="coffee-6"></div>
               <h3 class="h3-item">Latte</h3>
               <p class="p-item">Espresso coffee with the addition of steamed milk and dense milk foam</p>
               <p class="p-item-price">$5.50</p>
-            <!-- </div> -->
           </li>
 
           <li id="coffee-7-img" class="menu-card-item">
-            <!-- <div id="coffee-7-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-7.jpg" alt="coffee-7"></div>
               <h3 class="h3-item">Latte macchiato</h3>
               <p class="p-item">Espresso with frothed milk and chocolate</p>
               <p class="p-item-price">$5.50</p>
-            <!-- </div> -->
           </li>
 
           <li id="coffee-8-img" class="menu-card-item">
-            <!-- <div id="coffee-8-img" class="menu-card-item"> -->
               <div class="item-img"><img src="./images/coffee-8.jpg" alt="coffee-8"></div>
               <h3 class="h3-item">Coffee with cognac</h3>
               <p class="p-item">Fragrant black coffee with cognac and whipped cream</p>
               <p class="p-item-price">$6.50</p>
-            <!-- </div> -->
           </li>
+        </ul>
+        <ul id="tea-id" class="product-menu-section" data-target="tea">
+          <li id="tea-1-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/tea-1.png" alt="tea-1"></div>
+            <h3 class="h3-item">Moroccan</h3>
+            <p class="p-item">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+            <p class="p-item-price">$4.50</p>
+          </li>
+          <li id="tea-1-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/tea-2.png" alt="tea-1"></div>
+            <h3 class="h3-item">Ginger</h3>
+            <p class="p-item">Original black tea with fresh ginger, lemon and honey</p>
+            <p class="p-item-price">$5.00</p>
+          </li>
+          <li id="tea-1-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/tea-3.png" alt="tea-1"></div>
+            <h3 class="h3-item">Cranberry</h3>
+            <p class="p-item">Invigorating black tea with cranberry and honey</p>
+            <p class="p-item-price">$5.00</p>
+          </li>
+          <li id="tea-1-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/tea-4.png" alt="tea-1"></div>
+            <h3 class="h3-item">Sea buckthorn</h3>
+            <p class="p-item">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+            <p class="p-item-price">$5.50</p>
+          </li>
+        </ul>
+        <ul id="dessert-id" class="product-menu-section" data-target="dessert">
+          <li id="dessert-1-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-1.png" alt="dessert-1"></div>
+            <h3 class="h3-item">Marble cheesecake</h3>
+            <p class="p-item">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+            <p class="p-item-price">$3.50</p>
+        </li>
+
+        <li id="dessert-2-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-2.png" alt="dessert-2"></div>
+            <h3 class="h3-item">Red velvet</h3>
+            <p class="p-item">Layer cake with cream cheese frosting</p>
+            <p class="p-item-price">$4.00</p>
+        </li>
+
+        <li id="dessert-3-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-3.png" alt="dessert-3"></div>
+            <h3 class="h3-item">Cheesecakes</h3>
+            <p class="p-item">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+            <p class="p-item-price">$4.50</p>
+        </li>
+
+        <li id="dessert-4-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-4.png" alt="dessert-4"></div>
+            <h3 class="h3-item">Creme brulee</h3>
+            <p class="p-item">Delicate creamy dessert in a caramel basket with wild berries</p>
+            <p class="p-item-price">$4.00</p>
+        </li>
+
+        <li id="dessert-5-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-5.png" alt="dessert-5"></div>
+            <h3 class="h3-item">Pancakes</h3>
+            <p class="p-item">Tender pancakes with strawberry jam and fresh strawberries</p>
+            <p class="p-item-price">$4.50</p>
+        </li>
+
+        <li id="dessert-6-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-6.png" alt="dessert-6"></div>
+            <h3 class="h3-item">Honey cake</h3>
+            <p class="p-item">Classic honey cake with delicate custard</p>
+            <p class="p-item-price">$4.50</p>
+        </li>
+
+        <li id="dessert-7-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-7.png" alt="dessert-7"></div>
+            <h3 class="h3-item">Chocolate cake</h3>
+            <p class="p-item">Cake with hot chocolate filling and nuts with dried apricots</p>
+            <p class="p-item-price">$5.50</p>
+        </li>
+
+        <li id="dessert-8-img" class="menu-card-item">
+            <div class="item-img"><img src="./images/dessert-8.png" alt="dessert-8"></div>
+            <h3 class="h3-item">Black forest</h3>
+            <p class="p-item">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
+            <p class="p-item-price">$6.50</p>
+        </li>
         </ul>
         <button class="refresh-button">
           <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -246,5 +313,6 @@
   </footer>
 
   <script src="./js/index.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 </html>

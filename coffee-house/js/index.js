@@ -32,6 +32,8 @@ let offset = 0;
 let step = 0;
 let width = 1;
 
+let interval;
+
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 
@@ -85,7 +87,7 @@ function progressBar() {
     step = 1;
     var elem = document.querySelector(".pagination-btn-span-active");
     width = 1;
-    var interval = setInterval(frame, 65);
+    interval = setInterval(frame, 65);
     function frame() {
       if (width >= 100) {
         clearInterval(interval);
@@ -98,6 +100,16 @@ function progressBar() {
   }
 }
 
+function pause() {
+  clearInterval(interval);
+}
+
+slider.addEventListener('mouseover', (event) => {
+  if (event.target.closest('.slide')) {
+    pause();
+  }
+})
+
 setInterval(function() {
   nextSlide();
   activeButton(offset);
@@ -105,3 +117,4 @@ setInterval(function() {
 }, 7000)
 
 window.onload = () => progressBar();
+
