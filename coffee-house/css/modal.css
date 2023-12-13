@@ -193,6 +193,7 @@
   color: #E1D4C9;
   background-color: #665F55;
   transition: all 0.5s ease;
+  /* pointer-events: none; */
 }
 
 .modal-btn-inner-active {
@@ -210,5 +211,40 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 688px;
+    height: 626px;
+  }
+
+  .buttons {
+    width: 330px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 381px) {
+  .modal {
+    width: 342px;
+  }
+
+  .modal-coffee-left {
+    display: none;
+  }
+
+  .modal-price {
+    margin-right: 16px;
+  }
+
+  .p-offer {
+    margin-right: 16px;
+  }
+
+  .close-btn {
+    width: 95%;
+  }
 }
