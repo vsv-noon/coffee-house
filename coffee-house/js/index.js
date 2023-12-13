@@ -41,6 +41,11 @@ window.addEventListener('resize', checkWidth);
 
 function checkWidth() {
   slider.style.left = 0 + 'px';
+  if (window.innerWidth > 768) {
+    document.body.classList.remove("lock");
+    navigation.classList.remove("active");
+    hamburgerMenu.classList.remove("active");
+  }
 }
 
 function nextSlide() {
@@ -101,15 +106,29 @@ slider.addEventListener('mouseover', (event) => {
 });
 
 slider.addEventListener('mouseout', (event) => {
+  clearInterval(interval);
   progressBar();
 });
 
+let touchStartX = 0;
+let touchEndX = 0;
+
 slider.addEventListener('touchstart', (event) => {
   clearInterval(interval);
+  touchStartX = event.changedTouches[0].screenX;
 });
 
 slider.addEventListener('touchend', (event) => {
   clearInterval(interval);
+  touchEndX = event.changedTouches[0].screenX;
+  if (Math.abs(touchEndX - touchStartX) > 2) {
+    if (touchEndX > touchStartX) {
+      prevSlide()
+    };
+    if (touchEndX < touchStartX) {
+      nextSlide()
+    };
+  }
   progressBar();
 });
 
