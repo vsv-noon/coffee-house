@@ -28,7 +28,27 @@ menuCardItem.forEach((el) => {
     modalText.innerHTML = target.children[2].innerHTML;
     modalPrice.innerHTML = target.children[3].innerHTML;
 
-    imageBox.appendChild(image);
+    let dataItem = e.target.closest('.menu-card-item').dataset.title;
+
+    if (dataItem === "coffee-item") {
+      document.querySelector('.coffee-size-buttons').style.display = 'flex';
+      document.querySelector('.dessert-size-buttons').style.display = 'none';
+      document.querySelector('.coffee-additives-buttons').style.display = 'flex';
+      document.querySelector('.tea-additives-buttons').style.display = 'none';
+      document.querySelector('.dessert-additives-buttons').style.display = 'none';
+    } else if (dataItem === "tea-item") {
+      document.querySelector('.coffee-size-buttons').style.display = 'flex';
+      document.querySelector('.dessert-size-buttons').style.display = 'none';
+      document.querySelector('.coffee-additives-buttons').style.display = 'none';
+      document.querySelector('.tea-additives-buttons').style.display = 'flex';
+      document.querySelector('.dessert-additives-buttons').style.display = 'none';
+    } else if (dataItem === "dessert-item") {
+      document.querySelector('.dessert-size-buttons').style.display = 'flex';
+      document.querySelector('.coffee-size-buttons').style.display = 'none';
+      document.querySelector('.coffee-additives-buttons').style.display = 'none';
+      document.querySelector('.tea-additives-buttons').style.display = 'none';
+      document.querySelector('.dessert-additives-buttons').style.display = 'flex';
+    }
   })
 });
 
