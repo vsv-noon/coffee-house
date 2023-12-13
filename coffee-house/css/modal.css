@@ -136,8 +136,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
-  /* padding: 12px; */
-  /* margin-bottom: 20px; */
 }
 
 .buttons {
@@ -208,10 +206,12 @@
 }
 
 .close-btn {
-  width: 100%;
-  display: flex;
+  position: absolute;
+  bottom: 16px;
+  width: 438px;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   text-align: center;
 }
 
@@ -224,6 +224,10 @@
   .buttons {
     width: 330px;
     flex-wrap: wrap;
+  }
+
+  .close-btn {
+    width: 326px;
   }
 }
 
@@ -240,11 +244,11 @@
     margin-right: 16px;
   }
 
-  .p-offer {
-    margin-right: 16px;
+  .modal-offer {
+    padding-right: 16px;
   }
 
   .close-btn {
-    width: 95%;
+    width: 310px;
   }
 }
