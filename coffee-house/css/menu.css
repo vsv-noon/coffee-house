@@ -336,17 +336,17 @@ body {
   padding: 0 20px 20px;
 }
 
-.refresh-button {
+.load-more-button {
   display: none;
 }
 
 @media (hover:hover) and (pointer:fine) {
-  .refresh-button:hover {
+  .load-more-button:hover {
     background-color: var(--background-body, #665F55);
     transition: all 0.5s ease;
   }
 
-  .refresh-button:hover path {
+  .load-more-button:hover path {
     /* fill: var(--background-body, #E1D4C9); */
     stroke: var(--background-container, #E1D4C9);
     transition: all 0.5s ease;
@@ -360,14 +360,22 @@ body {
   #coffee-7-img,
   #coffee-8-img {
     display: none;
-    height: 0;
+    /* height: 0; */
+  }
+
+  #dessert-5-img,
+  #dessert-6-img,
+  #dessert-7-img,
+  #dessert-8-img {
+    display: none;
+    /* height: 0; */
   }
 
   .products-menu-box ul {
     margin-bottom: 40px;
   }
 
-  .refresh-button {
+  .load-more-button {
     display: block;
     width: 60px;
     height: 60px;
