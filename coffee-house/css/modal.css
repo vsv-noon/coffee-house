@@ -163,17 +163,18 @@
   cursor: pointer;
 }
 
-.modal-btn:hover {
-  color: #E1D4C9;
-  background-color: #665F55;
-  transition: all 0.5s ease;
-}
+@media (hover:hover) and (pointer:fine) {
+  .modal-btn:hover {
+    color: #E1D4C9;
+    background-color: #665F55;
+    transition: all 0.5s ease;
+  }
 
-.modal-btn:hover > .modal-btn-inner {
-  color: #403F3D;
-  background-color: #E1D4C9;
-  transition: all 0.5s ease;
-
+  .modal-btn:hover > .modal-btn-inner {
+    color: #403F3D;
+    background-color: #E1D4C9;
+    transition: all 0.5s ease;
+  }
 }
 
 .modal-btn-inner {

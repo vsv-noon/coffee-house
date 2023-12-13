@@ -2,7 +2,7 @@ const hamburgerMenu = document.querySelector(".hamburger-button");
 const navigation = document.querySelector(".header-panel");
 
 //Hamburger Menu Toggle
-hamburgerMenu.onclick = function() {
+hamburgerMenu.onclick = function () {
   document.body.classList.toggle("lock");
   hamburgerMenu.classList.toggle("active");
   navigation.classList.toggle("active");
@@ -10,8 +10,8 @@ hamburgerMenu.onclick = function() {
 
 document.addEventListener('click', (e) => {
   if (!e.target.classList.contains("hamburger-button")
-  && !e.target.closest(".header-panel")
-  || e.target.classList.contains("nav-link")) {
+    && !e.target.closest(".header-panel")
+    || e.target.classList.contains("nav-link")) {
     document.body.classList.remove("lock");
     navigation.classList.remove("active");
     hamburgerMenu.classList.remove("active");
@@ -27,10 +27,10 @@ const next = document.querySelector(".slider-arrow-right");
 const prev = document.querySelector(".slider-arrow-left");
 const switchActiveStatusButtons = document.querySelectorAll(".pagination-btn-span");
 const switchButton = document.querySelectorAll(".pagination-btn");
+var elem = document.querySelector(".pagination-btn-span-active");
 
 let offset = 0;
-let step = 0;
-let width = 1;
+let width = 0;
 
 let interval;
 
@@ -44,29 +44,28 @@ function checkWidth() {
 }
 
 function nextSlide() {
+  width = 0;
   offset++;
 
   if (offset == 3) {
     offset = 0;
   }
 
-  step = 0;
-
+  clearInterval(interval);
   switchSlide();
   activeButton(offset);
   progressBar();
 }
 
 function prevSlide() {
-  // offset--;
-
+  width = 0;
   if (offset == 0) {
     offset = 2;
   } else {
     offset--;
   }
 
-  step = 0;
+  clearInterval(interval);
   switchSlide();
   activeButton(offset);
   progressBar();
@@ -79,42 +78,40 @@ function switchSlide() {
 function activeButton(index) {
   switchActiveStatusButtons.forEach(Element => Element.classList.remove("pagination-btn-span-active"));
   switchActiveStatusButtons[index].classList.add("pagination-btn-span-active");
-  // progressBar(switchActiveStatusButtons[index]);
 }
 
 function progressBar() {
-  if (step == 0) {
-    step = 1;
-    var elem = document.querySelector(".pagination-btn-span-active");
-    width = 1;
-    interval = setInterval(frame, 65);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(interval);
-        step = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
+  var elem = document.querySelector(".pagination-btn-span-active");
+
+  interval = setInterval(frame, 60);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(interval);
+      width = 0;
+      nextSlide();
+    } else {
+      width++;
+      elem.style.width = width + "%";
     }
   }
 }
 
-function pause() {
-  clearInterval(interval);
-}
-
 slider.addEventListener('mouseover', (event) => {
-  if (event.target.closest('.slide')) {
-    pause();
-  }
-})
+  clearInterval(interval);
+});
 
-setInterval(function() {
-  nextSlide();
-  activeButton(offset);
+slider.addEventListener('mouseout', (event) => {
   progressBar();
-}, 7000)
+});
 
-window.onload = () => progressBar();
+slider.addEventListener('touchstart', (event) => {
+  clearInterval(interval);
+});
+
+slider.addEventListener('touchend', (event) => {
+  clearInterval(interval);
+  progressBar();
+});
+
+progressBar();
 
