@@ -119,7 +119,6 @@ slider.addEventListener('touchstart', (event) => {
 });
 
 slider.addEventListener('touchend', (event) => {
-  clearInterval(interval);
   touchEndX = event.changedTouches[0].screenX;
   if (Math.abs(touchEndX - touchStartX) > 2) {
     if (touchEndX > touchStartX) {
@@ -129,6 +128,7 @@ slider.addEventListener('touchend', (event) => {
       nextSlide()
     };
   }
+  clearInterval(interval);
   progressBar();
 });
 
