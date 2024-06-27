@@ -1,0 +1,111 @@
+body.lock {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .header-panel {
+    position: absolute;
+    padding-top: 80px;
+    top: 80px;
+    right: 0;
+    width: 0;
+    height: 100vh;
+     background: #E1D4C9;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    z-index: 10;
+    opacity: 0;
+  }
+
+  .header-panel.active {
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s ease;
+     opacity: 1;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+
+  .nav-link {
+    color: var(--text-dark, #403F3D);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+
+  .menu-button-header {
+    width: 143px;
+    height: 40px;
+    color: var(--text-dark, #403F3D);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    gap: 16px;
+  }
+
+  .menu-button-header svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .hamburger-button {
+    display: block;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    border: 1px solid var(--border-dark, #665F55);
+    cursor: pointer;
+  }
+
+  .hamburger-button::before {
+    position: absolute;
+    content: '';
+    top: 16px;
+    right: 13px;
+    width: 16px;
+    height: 1px;
+    background-color: #403F3D;
+    transition: all 0.3s ease 0s;
+  }
+
+  .hamburger-button::after {
+    position: absolute;
+    content: '';
+    top: 25px;
+    right: 13px;
+    width: 16px;
+    height: 1px;
+    background-color: #403F3D;
+    transition: all 0.3s ease 0s;
+  }
+
+  .hamburger-button.active::before {
+    top: 48%;
+    transform: translate(0px, 50%) rotate(45deg);
+  }
+
+  .hamburger-button.active::after {
+    top: 50%;
+    transform: translate(0px, -50%) rotate(-45deg);
+  }
+}
