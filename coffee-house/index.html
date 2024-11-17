@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee House</title>
+  <link rel="icon" href="./icons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/hamburger.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-wrapper">
+      <a href="./index.html"><div class="logo"></div></a>
+      <div class="hamburger-button"></div>
+      <div class="header-panel">
+        <nav class="header-navigation">
+          <ul class="nav-menu">
+            <li><a href="#favourites-coffee" class="nav-link">Favorite coffee</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#mobile-app" class="nav-link">Mobile app</a></li>
+            <li><a href="#contact-us" class="nav-link">Contact us</a></li>
+          </ul>
+        </nav>
+        <a class="menu-button-header" href="./menu.html">
+          Menu
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341V5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333V4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+  <main>
+    <h1 class="h1-coffee-house">Coffee house</h1>
+    <section id="enjoy">
+      <div class="enjoy-wrapper">
+        <video class="enjoy-video" autoplay muted loop playsinline poster="./images/img-hero.jpg" 
+        src="./images/video-hero.webm" type="video/webm"></video>
+        <div class="enjoy-text">
+          <h2 class="h2-enjoy"><span>Enjoy</span> premium coffee at our charming cafe
+          </h2>
+          <p class="p-enjoy">
+            With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular
+            destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
+          </p>
+          <button class="menu-button-enjoy" onclick="window.location.href='./menu.html';"><span>Menu</span></button>
+        </div>
+      </div>
+    </section>
+    <section id="favourites-coffee">
+      <div class="favourites-coffee-wrapper">
+        <h2 class="h2-favourites-coffee">Choose your <span>favorite</span> coffee</h2>
+        <div class="slider">
+          <button class="slider-arrow-left">
+            <!-- <img src="./icons/arrow-left.svg" alt="arrow-left"> -->
+          </button>
+          <div class="slider-wrapper">
+            <div class="slider-inner">
+              <div id="slide1" class="slide">
+                  <img src="./images/coffee-slider-1.png" alt="coffee-slider-1">
+                <h3 class="h3-favouretes-coffee">S’mores Frappuccino</h3>
+                <p class="p-favouretes-coffee">
+                  This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with
+                  oat milk.
+                </p>
+                <p class="price-favourites-coffee">
+                  $5.50
+                </p>
+              </div>
+
+              <div id="slide2" class="slide">
+                <img src="./images/coffee-slider-2.png" alt="coffee-slider-2">
+                <h3 class="h3-favouretes-coffee">Caramel Macchiato</h3>
+                <p class="p-favouretes-coffee">
+                  Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
+                </p>
+                <p class="price-favourites-coffee">
+                  $5.00
+                </p>
+              </div>
+
+              <div id="slide3" class="slide">
+                <img src="./images/coffee-slider-3.png" alt="coffee-slider-3">
+                <h3 class="h3-favouretes-coffee">Ice coffee</h3>
+                <p class="p-favouretes-coffee">
+                  A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+                </p>
+                <p class="price-favourites-coffee">
+                  $4.50
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="slider-arrow-right">
+            <!-- <img src="./icons/arrow-right.svg" alt="arrow-right"> -->
+          </button>
+        </div>
+        <div class="slider-pagination">
+          <div class="paginaton-btn">
+            <span id="pagination-btn-1" class="pagination-btn-span pagination-btn-span-active"></span>
+          </div>
+          <div class="paginaton-btn">
+            <span class="pagination-btn-span"></span>
+          </div>
+          <div class="paginaton-btn">
+            <span class="pagination-btn-span"></span>
+          </div>
+          <!-- <img src="./icons/control_dark.svg" alt="control_dark">
+          <img src="./icons/control.svg" alt="control">
+          <img src="./icons/control.svg" alt="control"> -->
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-wrapper">
+        <h2 class="h2-about">
+          Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax,
+          catch up with friends, or get some work done.
+        </h2>
+        <div class="about-images">
+          <div class="about-images-left-column">
+            <div class="about-1">
+              <img src="./images/about-1.jpg" alt="about-1" class="about-img">
+            </div>
+            <div class="about-2">
+              <img src="./images/about-2.jpg" alt="about-2" class="about-img">
+            </div>
+          </div>
+          <div class="about-images-rigth-column">
+            <div class="about-3">
+              <img src="./images/about-3.jpg" alt="about-3" class="about-img">
+            </div>
+            <div class="about-4">
+              <img src="./images/about-4.jpg" alt="about-4" class="about-img">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="mobile-app">
+      <div class="mobile-app-wrapper">
+        <div class="mobile-app-left">
+          <h2 class="h2-mobile-app"><span>Download</span> our apps to start ordering</h2>
+          <p class="p-mobile-app">Download the Resource app today and experience the comfort of ordering your favorite
+            coffee from wherever you are</p>
+          <button class="mobile-app-btn app-store" onclick="window.open('https://www.apple.com/app-store/','_blank')">Available on the<br><span>App Store</span></button>
+          <button class="mobile-app-btn google-play" onclick="window.open('https://play.google.com','_blank')">Available on<br><span>Google Play</span></button>
+        </div>
+        <div class="mobile-app-right">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="contact-us">
+    <div class="footer-wrapper">
+      <div class="footer-left-column">
+        <h2 class="h2-footer">Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
+        <ul class="social">
+          <li>
+            <a href="https://twitter.com" target="_blank">
+              <!-- <img src="./icons/twitter-light.svg"alt="twitter"> -->
+
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#C1B6AD"/>
+                <path d="M41 21.0101C41 21.0101 38.9821 22.2022 37.86 22.5401C37.2577 21.8476 36.4573 21.3567 35.567 21.134C34.6767 20.9112 33.7395 20.9673 32.8821 21.2945C32.0247 21.6218 31.2884 22.2045 30.773 22.9638C30.2575 23.7231 29.9877 24.6224 30 25.5401V26.5401C28.2426 26.5856 26.5013 26.1959 24.931 25.4055C23.3607 24.6151 22.0103 23.4487 21 22.0101C21 22.0101 17 31.0101 26 35.0101C23.9405 36.408 21.4872 37.109 19 37.0101C28 42.0101 39 37.0101 39 25.5101C38.9991 25.2315 38.9723 24.9537 38.92 24.6801C39.9406 23.6735 41 21.0101 41 21.0101Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank">
+              <!-- <img src="./icons/instagram-light.svg" alt="instagram"> -->
+
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#C1B6AD"/>
+                <path d="M30 34C32.2091 34 34 32.2091 34 30C34 27.7909 32.2091 26 30 26C27.7909 26 26 27.7909 26 30C26 32.2091 27.7909 34 30 34Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 34V26C21 23.2386 23.2386 21 26 21H34C36.7614 21 39 23.2386 39 26V34C39 36.7614 36.7614 39 34 39H26C23.2386 39 21 36.7614 21 34Z" stroke="#E1D4C9"/>
+                <path d="M35.5 24.51L35.51 24.4989" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com" target="_blank">
+              <!-- <img src="./icons//facebook-light.svg" alt="facebook"> -->
+
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#C1B6AD"/>
+                <path d="M35 20H32C30.6739 20 29.4021 20.5268 28.4645 21.4645C27.5268 22.4021 27 23.6739 27 25V28H24V32H27V40H31V32H34L35 28H31V25C31 24.7348 31.1054 24.4804 31.2929 24.2929C31.4804 24.1054 31.7348 24 32 24H35V20Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+          </li>
+        </ul>
+
+      </div>
+      <div class="footer-right-column">
+        <h3 class="h3-footer">Contact us</h3>
+        <ul class="footer-ul">
+          <li>
+            <a href="https://www.google.com/maps/place/Parkers'+Lighthouse/@33.7637611,-118.188721,16.01z/data=!4m6!3m5!1s0x80dd3125a85f8ef3:0x13a546608196176c!8m2!3d33.7598611!4d-118.1917967!16s%2Fg%2F12ht41c8v?entry=ttu" class="footer-link" target="_blank"><img src="./icons/pin-alt.svg" alt="map">
+              8558 Green Rd., LA</a>
+          </li>
+          <li>
+            <a href="tel:+16035550123" class="footer-link"><img src="./icons/phone.svg" alt="phone"> +1 (603) 555-0123</a>
+          </li>
+          <li>
+            <img src="./icons/clock.svg" alt="clock"> Mon-Sat: 9:00 AM – 23:00 PM
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
